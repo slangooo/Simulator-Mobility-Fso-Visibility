@@ -9,7 +9,6 @@ def get_azimuth(center_x, center_y, x, y):
 
 
 def get_mid_azimuth(p_origin, p1, p2):
-    #TODO: fix
     azim1 = get_azimuth(p_origin[0], p_origin[1], p1[0], p1[1])
     azim2 = get_azimuth(p_origin[0], p_origin[1], p2[0], p2[1])
     azim11 = angle_in_range(azim1 + 180, 360)

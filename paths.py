@@ -17,12 +17,12 @@ class Paths(object):
     def generate_paths(self, x_boundary=None, y_boundary=None):
 
         if not x_boundary or not y_boundary:
-            max_x_boundary, max_y_boundary = np.max(self.obstacles_vertices, 0) + 30
-            min_x_boundary, min_y_boundary = np.min(self.obstacles_vertices, 0) - 30
+            max_x_boundary, max_y_boundary = np.max(self.obstacles_vertices, 0) + 50
+            min_x_boundary, min_y_boundary = np.min(self.obstacles_vertices, 0) - 50
         else:
             min_x_boundary, max_x_boundary = x_boundary
             min_y_boundary, max_y_boundary = y_boundary
-
+        vertices_idxs_to_remove = []
         vor = self.vor
         center = vor.points.mean(axis=0)
         ptp_bound = vor.points.ptp(axis=0)
@@ -32,9 +32,12 @@ class Paths(object):
             simplex = np.asarray(simplex)
             if np.all(simplex >= 0):
                 if vor.vertices[simplex[0]][0] < min_x_boundary or vor.vertices[simplex[0]][0] > max_x_boundary or \
-                        vor.vertices[simplex[0]][1] < min_y_boundary or vor.vertices[simplex[0]][1] > max_y_boundary or\
-                        vor.vertices[simplex[1]][0] < min_x_boundary or vor.vertices[simplex[1]][0] > max_x_boundary or\
-                        vor.vertices[simplex[1]][1] < min_y_boundary or vor.vertices[simplex[1]][1] > max_y_boundary:
+                        vor.vertices[simplex[0]][1] < min_y_boundary or vor.vertices[simplex[0]][1] > max_y_boundary:
+                    vertices_idxs_to_remove.append(simplex[0])
+                    continue
+                if vor.vertices[simplex[1]][0] < min_x_boundary or vor.vertices[simplex[1]][0] > max_x_boundary or\
+                    vor.vertices[simplex[1]][1] < min_y_boundary or vor.vertices[simplex[1]][1] > max_y_boundary:
+                    vertices_idxs_to_remove.append(simplex[1])
                     continue
                 finite_segments.append(vor.vertices[simplex])
             else:
@@ -64,7 +67,15 @@ class Paths(object):
                     self.all_vertices.append(far_point.tolist())
 
         self.paths_segments = infinite_segments + finite_segments
-        # voronoi_plot_2d(vor)
+
+        for idx in sorted(set(vertices_idxs_to_remove), reverse=True):
+            self.all_vertices.pop(idx)
+            # while self.all_vertices[idx][0] < min_x_boundary or self.all_vertices[idx][0] > max_x_boundary or\
+            #         self.all_vertices[idx][1] < min_y_boundary or self.all_vertices[idx][1] > max_y_boundary:
+            #     self.all_vertices[idx][0] *= 0.9
+            #     self.all_vertices[idx][1] *= 0.9
+
+
         return self.paths_segments
 
     def get_segments(self):

@@ -217,7 +217,7 @@ class SimulationController:
 
 
     def calculate_energy_level(self, base_station):
-        irradiation_magnitude = (1 - numpy.random.uniform(0.0, 0.2)) * \
+        irradiation_magnitude = (1 - numpy.random.uniform(0.4, 0.6)) * \
                                 self.constant_irradiation
         if self.renewable_energy_flag:
             produced_energy = self.power_manager.calculate_energy_produced(self.last_time_step,

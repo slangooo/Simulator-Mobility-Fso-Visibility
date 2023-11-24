@@ -223,5 +223,5 @@ if __name__ == '__main__':
             xs = [vert.coords.x, g.vert_dict[vert_id].coords.x]
             ys = [vert.coords.y, g.vert_dict[vert_id].coords.y]
             plt.plot(xs, ys, markerfacecolor='black', linestyle='dotted', linewidth=1, color='black')
-    # plt.show()
+    plt.show()
 

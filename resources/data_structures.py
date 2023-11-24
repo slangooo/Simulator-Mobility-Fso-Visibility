@@ -4,9 +4,10 @@ from resources.math_utils import get_azimuth, get_distance, angle_in_range, to_r
 from shapely.geometry import Point
 from shapely.geometry.polygon import Polygon
 from scipy.spatial import ConvexHull, convex_hull_plot_2d, Delaunay
+from scipy.spatial.distance import cdist
 
 
-def point_inside_prlgm(x,y,poly):
+def point_inside_prlgm(x, y, poly):
     inside = False
     xb = poly[0][0] - poly[1][0]
     yb = poly[0][1] - poly[1][1]
@@ -30,10 +31,14 @@ class Obstacle:
     height: float
     vertices: list
 
-    def get_adjacent_vertices(self, _vertex):
-        idx = self.vertices.index(_vertex)
-        return [self.vertices[(idx + 1) % len(self.vertices)],
-                self.vertices[(idx - 1 + len(self.vertices)) % len(self.vertices)]]
+    def get_adjacent_vertices(self, _vertex=None, idx=None):
+        if _vertex:
+            idx = self.vertices.index(_vertex)
+            return [self.vertices[(idx + 1) % len(self.vertices)],
+                    self.vertices[(idx - 1 + len(self.vertices)) % len(self.vertices)]]
+        else:
+            return [(idx + 1) % len(self.vertices),
+                    (idx - 1 + len(self.vertices)) % len(self.vertices)]
 
     def is_overlapping(self, x, y, ref_height=0):
         if ref_height > self.height:
@@ -102,28 +107,52 @@ class Obstacle:
         if elevation_to_dest < 0:
             return True
         ##########
-        shadow_length = (self.height - reference_height)/ np.tan(np.deg2rad(elevation_to_dest))
-        # TODO: check only closest two edges
-        # point = Point(src_x, src_y)
-        p0p = line_point_angle(shadow_length, self.vertices[0], angle_x=azimuth_to_dest + 180, angle_y=None, rounding=False)
-        p1p = line_point_angle(shadow_length, self.vertices[1], angle_x=azimuth_to_dest + 180, angle_y=None, rounding=False)
-        p2p = line_point_angle(shadow_length, self.vertices[2], angle_x=azimuth_to_dest + 180, angle_y=None, rounding=False)
-        p3p = line_point_angle(shadow_length, self.vertices[3], angle_x=azimuth_to_dest + 180, angle_y=None, rounding=False)
+        shadow_length = (self.height - reference_height) / np.tan(np.deg2rad(elevation_to_dest))
+
+        # _vertices = np.array(self.vertices)
+        # src = np.array([[src_x, src_y]])
+        # mix_idx = cdist(src, _vertices).argmin()
+        # idxs = self.get_adjacent_vertices(idx=mix_idx)
+        # idxs.insert(1,mix_idx)
+        # _vertices = _vertices[idxs]
+        # p0p = line_point_angle(shadow_length, _vertices[0], angle_x=azimuth_to_dest + 180, angle_y=None,
+        #                        rounding=False)
+        # p1p = line_point_angle(shadow_length, _vertices[1], angle_x=azimuth_to_dest + 180, angle_y=None,
+        #                        rounding=False)
+        # p2p = line_point_angle(shadow_length, _vertices[2], angle_x=azimuth_to_dest + 180, angle_y=None,
+        #                        rounding=False)
+        # projections = [p0p, p1p, p2p]
+        # plgrm1 = [_vertices[0], p0p, p1p, _vertices[1]]
+        # plgrm2 = [_vertices[1], p1p, p2p, _vertices[2]]
+        # if point_inside_prlgm(src_x,src_y,plgrm1):
+        #     return True
+        # elif point_inside_prlgm(src_x,src_y,plgrm2):
+        #     return True
+        # return False
+
+        p0p = line_point_angle(shadow_length, self.vertices[0], angle_x=azimuth_to_dest + 180, angle_y=None,
+                               rounding=False)
+        p1p = line_point_angle(shadow_length, self.vertices[1], angle_x=azimuth_to_dest + 180, angle_y=None,
+                               rounding=False)
+        p2p = line_point_angle(shadow_length, self.vertices[2], angle_x=azimuth_to_dest + 180, angle_y=None,
+                               rounding=False)
+        p3p = line_point_angle(shadow_length, self.vertices[3], angle_x=azimuth_to_dest + 180, angle_y=None,
+                               rounding=False)
         projections = [p0p, p1p, p2p, p3p]
         for p1, p2, p1p, p2p in zip(self.vertices, rotate(self.vertices, 1), projections, rotate(projections, 1)):
-            if point_inside_prlgm(src_x,src_y,[p1, p1p, p2p, p2]):
+            if point_inside_prlgm(src_x, src_y, [p1, p1p, p2p, p2]):
                 return True
 
         # ch = ConvexHull(self.vertices + [p0p, p1p, p2p, p3p])
-        # # 1st way
-        # # ch = Delaunay(ch.points)
-        # # if ch.find_simplex(point) >= 0:
-        # #     return True
-        # #
-        # # #2nd way
-        # # polygon = Polygon(ch.points)
-        # # if polygon.contains(point):
-        # #         return True
+        # 1st way
+        # ch = Delaunay(ch.points)
+        # if ch.find_simplex(point) >= 0:
+        #     return True
+        #
+        # #2nd way
+        # polygon = Polygon(ch.points)
+        # if polygon.contains(point):
+        #         return True
 
         return False
         #########
@@ -189,6 +218,10 @@ class Coords:
     def __eq__(self, other):
         return self.x == other.x and self.y == other.y
 
+    def set(self, new_coords: 'Coords'):
+        self.x = new_coords.x
+        self.y = new_coords.y
+
     def np_array(self):
         return np.asarray((self.x, self.y))
 
@@ -220,11 +253,11 @@ class Coords:
             return np.sqrt((self.x - other_coords.x) ** 2 + (self.y - other_coords.y) ** 2)
         elif isinstance(other_coords, Coords3D):
             return np.sqrt(((self.x - other_coords.x) ** 2 + (self.y - other_coords.y) ** 2
-                            + (other_coords.z ** 2 if not flag_2d else 0)))
+                            + ((self.z - other_coords.z) ** 2 if not flag_2d else 0)))
         elif isinstance(other_coords, tuple) or isinstance(other_coords, tuple):
             squared_sum = (other_coords[0] - self.x) ** 2 + (other_coords[1] - self.y) ** 2
             if len(other_coords) > 2 and not flag_2d:
-                squared_sum += other_coords[2] ** 2
+                squared_sum += (other_coords[2] - self.z) ** 2
             return np.sqrt(squared_sum)
         else:
             raise ValueError('Unidentified input format!')
@@ -239,6 +272,11 @@ class Coords3D:
     x: float
     y: float
     z: float
+
+    def set(self, new_coords: 'Coords3D'):
+        self.x = new_coords.x
+        self.y = new_coords.y
+        self.z = new_coords.z
 
     def __hash__(self):
         return hash((self.x, self.y, self.z))

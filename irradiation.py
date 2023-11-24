@@ -393,7 +393,7 @@ class PowerManager:
 if __name__ == '__main__':
     power_manager = PowerManager()
     power_manager.set_manager_default_values()
-    _date = datetime(2022, STARTING_MONTH, STARTING_DAY, STARTING_SOLAR_HOUR, STARTING_SOLAR_MINUTE)
+    _date = datetime(2022, 7, 1, 13, 0)
     constant_irradiation = power_manager.caluclate_constant_solar_irradiation_power(_date)
     sin_solar_angle = power_manager.calculate_sin_solar_altitude(_date)
     irradiation_magnitude = power_manager.generate_random_solar_irradiation_power(0, 1) + constant_irradiation

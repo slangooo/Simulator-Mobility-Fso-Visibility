@@ -167,4 +167,4 @@ def plotter_func(path_segments, obstacles_list, users_coords, base_stations_coor
 if __name__ == '__main__':
     mobility_model = ObstaclesMobilityModel()
     mobility_model.generate_plot()
-    mobility_model.generate_model_step(1)
+    mobility_model.generate_model()

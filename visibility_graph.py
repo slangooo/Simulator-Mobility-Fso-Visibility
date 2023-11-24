@@ -24,6 +24,8 @@ SOFTWARE.
 from timeit import default_timer
 from sys import stdout, version_info
 from multiprocessing import Pool
+
+import numpy as np
 from tqdm import tqdm
 from warnings import warn
 
@@ -31,7 +33,7 @@ from warnings import warn
 # from pyvisgraph.shortest_path import shortest_path
 # from pyvisgraph.visible_vertices import visible_vertices, point_in_polygon
 # from pyvisgraph.visible_vertices import closest_point
-
+from parameters import SHADOWED_EDGE_PENALTY, NO_SUN
 from math import pi, sqrt, atan, acos
 
 from main_controller import *
@@ -62,7 +64,7 @@ class VisGraph(object):
         with open(filename, 'wb') as output:
             pickle.dump((self.graph, self.visgraph), output, -1)
 
-    def build(self, input, selected_vertices=None, workers=1, status=True):
+    def build(self, input, selected_vertices=None, workers=4, status=True):
         """Build visibility graph based on a list of polygons.
 
         The input must be a list of polygons, where each polygon is a list of
@@ -591,7 +593,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 from collections import defaultdict
-
+from mmwave_modeling import get_ris_path_loss, get_simple_pl, MAXIMUM_PL
 
 class Point(object):
     __slots__ = ('x', 'y', 'polygon_id')
@@ -625,11 +627,28 @@ class Point(object):
 
 
 class Edge(object):
-    __slots__ = ('p1', 'p2')
+    __slots__ = ('p1', 'p2', 'ris_hop')
 
     def __init__(self, point1, point2):
         self.p1 = point1
         self.p2 = point2
+        self.ris_hop = None
+
+    def get_cost_sunny(self):
+        return 1 + edge_distance(self.p1, self.p2)/707
+
+    def get_cost_no_sun(self):
+        if self.ris_hop:
+            ris_pt = Point(self.ris_hop.x, self.ris_hop.y)
+            pl = get_ris_path_loss(edge_distance(self.p1, ris_pt),
+                                     edge_distance(self.p2, ris_pt), self.ris_hop.active_flag)
+        else:
+            pl = get_simple_pl(edge_distance(self.p1, self.p2))
+
+        if pl < MAXIMUM_PL:
+            return pl
+        else:
+            return np.inf
 
     def get_adjacent(self, point):
         if point == self.p1:
@@ -787,10 +806,11 @@ def dijkstra(graph, origin, destination, add_to_visgraph, selected_vertices):
             edges = add_to_visgraph[v] | graph[v]
         for e in edges:
             w = e.get_adjacent(v)
-            if w in selected_vertices:
-                cost = 1 + edge_distance(v, w)/707
+            if not NO_SUN:
+                cost = e.get_cost_sunny() + (SHADOWED_EDGE_PENALTY if w in selected_vertices else 0)
             else:
-                cost = 100 + edge_distance(v, w)/707
+                cost = e.get_cost_no_sun() + 10000
+
             elength = D[v] + cost
             if w in D:
                 if elength < D[w]:
