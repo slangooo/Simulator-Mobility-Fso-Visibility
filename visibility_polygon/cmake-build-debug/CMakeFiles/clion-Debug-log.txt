@@ -1,0 +1,585 @@
+"C:\Program Files\JetBrains\CLion 2022.3.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.3.3/bin/ninja/win/x64/ninja.exe" -DCMAKE_TOOLCHAIN_FILE=C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake -G Ninja -S C:\Users\user\PycharmProjects\obstacleMobilityModel\visibility_polygon -B C:\Users\user\PycharmProjects\obstacleMobilityModel\visibility_polygon\cmake-build-debug
+CMake Debug Log at C:/src/vcpkg/installed/x64-windows/share/cgal/CGAL_Common.cmake:21 (find_program):
+  find_program called with the following settings:
+
+    VAR: CMAKE_UNAME
+    NAMES: "uname"
+    Documentation: Variable hidden from user
+    Framework
+      Only Search Frameworks: 0
+      Search Frameworks Last: 1
+      Search Frameworks First: 0
+    AppBundle
+      Only Search AppBundle: 0
+      Search AppBundle Last: 1
+      Search AppBundle First: 0
+    CMAKE_FIND_USE_CMAKE_PATH: 1
+    CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: 1
+    CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: 1
+    CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: 1
+    CMAKE_FIND_USE_INSTALL_PREFIX: 1
+
+  find_program considered the following locations:
+
+    C:/src/vcpkg/installed/x64-windows/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/bin/uname
+    C:/src/vcpkg/installed/x64-windows/sbin/uname.com
+    C:/src/vcpkg/installed/x64-windows/sbin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/sbin/uname
+    C:/src/vcpkg/installed/x64-windows/uname.com
+    C:/src/vcpkg/installed/x64-windows/uname.exe
+    C:/src/vcpkg/installed/x64-windows/uname
+    C:/src/vcpkg/installed/x64-windows/debug/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/bin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/sbin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/sbin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/sbin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/uname
+    C:/src/vcpkg/installed/x64-windows/tools/uname.com
+    C:/src/vcpkg/installed/x64-windows/tools/uname.exe
+    C:/src/vcpkg/installed/x64-windows/tools/uname
+    C:/src/vcpkg/installed/x64-windows/tools/boost-build/uname.com
+    C:/src/vcpkg/installed/x64-windows/tools/boost-build/uname.exe
+    C:/src/vcpkg/installed/x64-windows/tools/boost-build/uname
+    C:/src/vcpkg/installed/x64-windows/tools/bzip2/uname.com
+    C:/src/vcpkg/installed/x64-windows/tools/bzip2/uname.exe
+    C:/src/vcpkg/installed/x64-windows/tools/bzip2/uname
+    C:/src/vcpkg/installed/x64-windows/tools/openssl/uname.com
+    C:/src/vcpkg/installed/x64-windows/tools/openssl/uname.exe
+    C:/src/vcpkg/installed/x64-windows/tools/openssl/uname
+    C:/src/vcpkg/installed/x64-windows/tools/python3/uname.com
+    C:/src/vcpkg/installed/x64-windows/tools/python3/uname.exe
+    C:/src/vcpkg/installed/x64-windows/tools/python3/uname
+    C:/src/vcpkg/installed/x64-windows/tools/yasm/uname.com
+    C:/src/vcpkg/installed/x64-windows/tools/yasm/uname.exe
+    C:/src/vcpkg/installed/x64-windows/tools/yasm/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files/JetBrains/CLion 2022.3.3/bin/mingw/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files/JetBrains/CLion 2022.3.3/bin/mingw/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files/JetBrains/CLion 2022.3.3/bin/mingw/bin/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/bin/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/libnvvp/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/libnvvp/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/libnvvp/uname
+    C:/src/vcpkg/installed/x64-windows/Windows/System32/uname.com
+    C:/src/vcpkg/installed/x64-windows/Windows/System32/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Windows/System32/uname
+    C:/src/vcpkg/installed/x64-windows/Windows/uname.com
+    C:/src/vcpkg/installed/x64-windows/Windows/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Windows/uname
+    C:/src/vcpkg/installed/x64-windows/Windows/System32/wbem/uname.com
+    C:/src/vcpkg/installed/x64-windows/Windows/System32/wbem/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Windows/System32/wbem/uname
+    C:/src/vcpkg/installed/x64-windows/Windows/System32/WindowsPowerShell/v1.0/uname.com
+    C:/src/vcpkg/installed/x64-windows/Windows/System32/WindowsPowerShell/v1.0/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Windows/System32/WindowsPowerShell/v1.0/uname
+    C:/src/vcpkg/installed/x64-windows/Windows/System32/OpenSSH/uname.com
+    C:/src/vcpkg/installed/x64-windows/Windows/System32/OpenSSH/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Windows/System32/OpenSSH/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/NVIDIA Corporation/PhysX/Common/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/NVIDIA Corporation/PhysX/Common/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/NVIDIA Corporation/PhysX/Common/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files/NVIDIA Corporation/Nsight Compute 2020.3.0/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files/NVIDIA Corporation/Nsight Compute 2020.3.0/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files/NVIDIA Corporation/Nsight Compute 2020.3.0/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files/Git/cmd/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files/Git/cmd/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files/Git/cmd/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files/nodejs/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files/nodejs/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files/nodejs/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files/MATLAB/R2022a/runtime/win64/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files/MATLAB/R2022a/runtime/win64/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files/MATLAB/R2022a/runtime/win64/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files/MATLAB/R2022a/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files/MATLAB/R2022a/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files/MATLAB/R2022a/bin/uname
+    C:/src/vcpkg/installed/x64-windows/Users/user/AppData/Local/Microsoft/WindowsApps/uname.com
+    C:/src/vcpkg/installed/x64-windows/Users/user/AppData/Local/Microsoft/WindowsApps/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Users/user/AppData/Local/Microsoft/WindowsApps/uname
+    C:/src/vcpkg/installed/x64-windows/Users/user/AppData/Local/Programs/MiKTeX/miktex/bin/x64/uname.com
+    C:/src/vcpkg/installed/x64-windows/Users/user/AppData/Local/Programs/MiKTeX/miktex/bin/x64/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Users/user/AppData/Local/Programs/MiKTeX/miktex/bin/x64/uname
+    C:/src/vcpkg/installed/x64-windows/Users/user/AppData/Roaming/npm/uname.com
+    C:/src/vcpkg/installed/x64-windows/Users/user/AppData/Roaming/npm/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Users/user/AppData/Roaming/npm/uname
+    C:/src/vcpkg/installed/x64-windows/Users/user/PycharmProjects/obstacleMobilityModel/visibility_polygon/cmake-build-debug/uname.com
+    C:/src/vcpkg/installed/x64-windows/Users/user/PycharmProjects/obstacleMobilityModel/visibility_polygon/cmake-build-debug/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Users/user/PycharmProjects/obstacleMobilityModel/visibility_polygon/cmake-build-debug/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files/JetBrains/CLion 2022.3.3/bin/ninja/win/x64/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files/JetBrains/CLion 2022.3.3/bin/ninja/win/x64/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files/JetBrains/CLion 2022.3.3/bin/ninja/win/x64/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files/bin/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files/sbin/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files/sbin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files/sbin/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/bin/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/sbin/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/sbin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/sbin/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/bin/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/sbin/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/sbin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/sbin/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/visbility_polygon/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/visbility_polygon/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/visbility_polygon/bin/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/visbility_polygon/sbin/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/visbility_polygon/sbin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/visbility_polygon/sbin/uname
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/visbility_polygon/uname.com
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/visbility_polygon/uname.exe
+    C:/src/vcpkg/installed/x64-windows/Program Files (x86)/visbility_polygon/uname
+    C:/src/vcpkg/installed/x64-windows/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/bin/uname
+    C:/src/vcpkg/installed/x64-windows/usr/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/usr/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/usr/bin/uname
+    C:/src/vcpkg/installed/x64-windows/usr/local/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/usr/local/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/usr/local/bin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/bin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/sbin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/sbin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/sbin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/uname
+    C:/src/vcpkg/installed/x64-windows/debug/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/bin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/sbin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/sbin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/sbin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/uname
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/tools/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/tools/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/tools/uname
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/tools/boost-build/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/tools/boost-build/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/tools/boost-build/uname
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/tools/bzip2/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/tools/bzip2/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/tools/bzip2/uname
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/tools/openssl/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/tools/openssl/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/tools/openssl/uname
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/tools/python3/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/tools/python3/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/tools/python3/uname
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/tools/yasm/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/tools/yasm/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/src/vcpkg/installed/x64-windows/tools/yasm/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/JetBrains/CLion 2022.3.3/bin/mingw/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/JetBrains/CLion 2022.3.3/bin/mingw/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/JetBrains/CLion 2022.3.3/bin/mingw/bin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/bin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/libnvvp/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/libnvvp/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/libnvvp/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Windows/System32/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Windows/System32/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Windows/System32/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Windows/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Windows/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Windows/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Windows/System32/wbem/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Windows/System32/wbem/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Windows/System32/wbem/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Windows/System32/WindowsPowerShell/v1.0/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Windows/System32/WindowsPowerShell/v1.0/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Windows/System32/WindowsPowerShell/v1.0/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Windows/System32/OpenSSH/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Windows/System32/OpenSSH/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Windows/System32/OpenSSH/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/NVIDIA Corporation/PhysX/Common/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/NVIDIA Corporation/PhysX/Common/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/NVIDIA Corporation/PhysX/Common/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/NVIDIA Corporation/Nsight Compute 2020.3.0/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/NVIDIA Corporation/Nsight Compute 2020.3.0/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/NVIDIA Corporation/Nsight Compute 2020.3.0/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/Git/cmd/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/Git/cmd/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/Git/cmd/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/nodejs/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/nodejs/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/nodejs/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/MATLAB/R2022a/runtime/win64/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/MATLAB/R2022a/runtime/win64/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/MATLAB/R2022a/runtime/win64/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/MATLAB/R2022a/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/MATLAB/R2022a/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/MATLAB/R2022a/bin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Users/user/AppData/Local/Microsoft/WindowsApps/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Users/user/AppData/Local/Microsoft/WindowsApps/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Users/user/AppData/Local/Microsoft/WindowsApps/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Users/user/AppData/Local/Programs/MiKTeX/miktex/bin/x64/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Users/user/AppData/Local/Programs/MiKTeX/miktex/bin/x64/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Users/user/AppData/Local/Programs/MiKTeX/miktex/bin/x64/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Users/user/AppData/Roaming/npm/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Users/user/AppData/Roaming/npm/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Users/user/AppData/Roaming/npm/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Users/user/PycharmProjects/obstacleMobilityModel/visibility_polygon/cmake-build-debug/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Users/user/PycharmProjects/obstacleMobilityModel/visibility_polygon/cmake-build-debug/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Users/user/PycharmProjects/obstacleMobilityModel/visibility_polygon/cmake-build-debug/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/JetBrains/CLion 2022.3.3/bin/ninja/win/x64/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/JetBrains/CLion 2022.3.3/bin/ninja/win/x64/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/JetBrains/CLion 2022.3.3/bin/ninja/win/x64/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/bin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/sbin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/sbin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/sbin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/bin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/sbin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/sbin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/sbin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/bin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/sbin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/sbin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/sbin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/visbility_polygon/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/visbility_polygon/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/visbility_polygon/bin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/visbility_polygon/sbin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/visbility_polygon/sbin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/visbility_polygon/sbin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/visbility_polygon/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/visbility_polygon/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/Program Files (x86)/visbility_polygon/uname
+    C:/src/vcpkg/installed/x64-windows/debug/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/bin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/usr/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/usr/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/usr/bin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/usr/local/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/usr/local/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/usr/local/bin/uname
+    C:/src/vcpkg/installed/x64-windows/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/bin/uname
+    C:/src/vcpkg/installed/x64-windows/sbin/uname.com
+    C:/src/vcpkg/installed/x64-windows/sbin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/sbin/uname
+    C:/src/vcpkg/installed/x64-windows/uname.com
+    C:/src/vcpkg/installed/x64-windows/uname.exe
+    C:/src/vcpkg/installed/x64-windows/uname
+    C:/src/vcpkg/installed/x64-windows/debug/bin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/bin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/bin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/sbin/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/sbin/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/sbin/uname
+    C:/src/vcpkg/installed/x64-windows/debug/uname.com
+    C:/src/vcpkg/installed/x64-windows/debug/uname.exe
+    C:/src/vcpkg/installed/x64-windows/debug/uname
+    C:/src/vcpkg/installed/x64-windows/tools/uname.com
+    C:/src/vcpkg/installed/x64-windows/tools/uname.exe
+    C:/src/vcpkg/installed/x64-windows/tools/uname
+    C:/src/vcpkg/installed/x64-windows/tools/boost-build/uname.com
+    C:/src/vcpkg/installed/x64-windows/tools/boost-build/uname.exe
+    C:/src/vcpkg/installed/x64-windows/tools/boost-build/uname
+    C:/src/vcpkg/installed/x64-windows/tools/bzip2/uname.com
+    C:/src/vcpkg/installed/x64-windows/tools/bzip2/uname.exe
+    C:/src/vcpkg/installed/x64-windows/tools/bzip2/uname
+    C:/src/vcpkg/installed/x64-windows/tools/openssl/uname.com
+    C:/src/vcpkg/installed/x64-windows/tools/openssl/uname.exe
+    C:/src/vcpkg/installed/x64-windows/tools/openssl/uname
+    C:/src/vcpkg/installed/x64-windows/tools/python3/uname.com
+    C:/src/vcpkg/installed/x64-windows/tools/python3/uname.exe
+    C:/src/vcpkg/installed/x64-windows/tools/python3/uname
+    C:/src/vcpkg/installed/x64-windows/tools/yasm/uname.com
+    C:/src/vcpkg/installed/x64-windows/tools/yasm/uname.exe
+    C:/src/vcpkg/installed/x64-windows/tools/yasm/uname
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/mingw/bin/uname.com
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/mingw/bin/uname.exe
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/mingw/bin/uname
+    C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/bin/uname.com
+    C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/bin/uname.exe
+    C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/bin/uname
+    C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/libnvvp/uname.com
+    C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/libnvvp/uname.exe
+    C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/libnvvp/uname
+    C:/Windows/System32/uname.com
+    C:/Windows/System32/uname.exe
+    C:/Windows/System32/uname
+    C:/Windows/uname.com
+    C:/Windows/uname.exe
+    C:/Windows/uname
+    C:/Windows/System32/wbem/uname.com
+    C:/Windows/System32/wbem/uname.exe
+    C:/Windows/System32/wbem/uname
+    C:/Windows/System32/WindowsPowerShell/v1.0/uname.com
+    C:/Windows/System32/WindowsPowerShell/v1.0/uname.exe
+    C:/Windows/System32/WindowsPowerShell/v1.0/uname
+    C:/Windows/System32/OpenSSH/uname.com
+    C:/Windows/System32/OpenSSH/uname.exe
+    C:/Windows/System32/OpenSSH/uname
+    C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/uname.com
+    C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/uname.exe
+    C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/uname
+    C:/Program Files/NVIDIA Corporation/Nsight Compute 2020.3.0/uname.com
+    C:/Program Files/NVIDIA Corporation/Nsight Compute 2020.3.0/uname.exe
+    C:/Program Files/NVIDIA Corporation/Nsight Compute 2020.3.0/uname
+    C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/uname.com
+    C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/uname.exe
+    C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/uname
+    C:/Program Files/Git/cmd/uname.com
+    C:/Program Files/Git/cmd/uname.exe
+    C:/Program Files/Git/cmd/uname
+    C:/Program Files/nodejs/uname.com
+    C:/Program Files/nodejs/uname.exe
+    C:/Program Files/nodejs/uname
+    C:/Program Files/MATLAB/R2022a/runtime/win64/uname.com
+    C:/Program Files/MATLAB/R2022a/runtime/win64/uname.exe
+    C:/Program Files/MATLAB/R2022a/runtime/win64/uname
+    C:/Program Files/MATLAB/R2022a/bin/uname.com
+    C:/Program Files/MATLAB/R2022a/bin/uname.exe
+    C:/Program Files/MATLAB/R2022a/bin/uname
+    C:/Users/user/AppData/Local/Microsoft/WindowsApps/uname.com
+    C:/Users/user/AppData/Local/Microsoft/WindowsApps/uname.exe
+    C:/Users/user/AppData/Local/Microsoft/WindowsApps/uname
+    C:/Users/user/AppData/Local/Programs/MiKTeX/miktex/bin/x64/uname.com
+    C:/Users/user/AppData/Local/Programs/MiKTeX/miktex/bin/x64/uname.exe
+    C:/Users/user/AppData/Local/Programs/MiKTeX/miktex/bin/x64/uname
+    C:/Users/user/AppData/Roaming/npm/uname.com
+    C:/Users/user/AppData/Roaming/npm/uname.exe
+    C:/Users/user/AppData/Roaming/npm/uname
+    C:/Users/user/PycharmProjects/obstacleMobilityModel/visibility_polygon/cmake-build-debug/uname.com
+    C:/Users/user/PycharmProjects/obstacleMobilityModel/visibility_polygon/cmake-build-debug/uname.exe
+    C:/Users/user/PycharmProjects/obstacleMobilityModel/visibility_polygon/cmake-build-debug/uname
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/ninja/win/x64/uname.com
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/ninja/win/x64/uname.exe
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/ninja/win/x64/uname
+    C:/Program Files/bin/uname.com
+    C:/Program Files/bin/uname.exe
+    C:/Program Files/bin/uname
+    C:/Program Files/sbin/uname.com
+    C:/Program Files/sbin/uname.exe
+    C:/Program Files/sbin/uname
+    C:/Program Files/uname.com
+    C:/Program Files/uname.exe
+    C:/Program Files/uname
+    C:/Program Files (x86)/bin/uname.com
+    C:/Program Files (x86)/bin/uname.exe
+    C:/Program Files (x86)/bin/uname
+    C:/Program Files (x86)/sbin/uname.com
+    C:/Program Files (x86)/sbin/uname.exe
+    C:/Program Files (x86)/sbin/uname
+    C:/Program Files (x86)/uname.com
+    C:/Program Files (x86)/uname.exe
+    C:/Program Files (x86)/uname
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/bin/uname.com
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/bin/uname.exe
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/bin/uname
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/sbin/uname.com
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/sbin/uname.exe
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/sbin/uname
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/uname.com
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/uname.exe
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/uname
+    C:/Program Files (x86)/visbility_polygon/bin/uname.com
+    C:/Program Files (x86)/visbility_polygon/bin/uname.exe
+    C:/Program Files (x86)/visbility_polygon/bin/uname
+    C:/Program Files (x86)/visbility_polygon/sbin/uname.com
+    C:/Program Files (x86)/visbility_polygon/sbin/uname.exe
+    C:/Program Files (x86)/visbility_polygon/sbin/uname
+    C:/Program Files (x86)/visbility_polygon/uname.com
+    C:/Program Files (x86)/visbility_polygon/uname.exe
+    C:/Program Files (x86)/visbility_polygon/uname
+    /bin/uname.com
+    /bin/uname.exe
+    /bin/uname
+    /usr/bin/uname.com
+    /usr/bin/uname.exe
+    /usr/bin/uname
+    /usr/local/bin/uname.com
+    /usr/local/bin/uname.exe
+    /usr/local/bin/uname
+
+  The item was not found.
+
+Call Stack (most recent call first):
+  C:/src/vcpkg/installed/x64-windows/share/cgal/CGALConfig.cmake:112 (include)
+  C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake:852 (_find_package)
+  CMakeLists.txt:10 (find_package)
+
+
+-- Visual Leak Detector (VLD) is not found.
+-- Using header-only CGAL
+-- Targetting Ninja
+-- Using C:/Program Files/JetBrains/CLion 2022.3.3/bin/mingw/bin/g++.exe compiler.
+CMake Debug Log at C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake:852 (_find_package):
+  find_package considered the following paths for FindGMP.cmake:
+
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/share/cmake-3.24/Modules/FindGMP.cmake
+
+  The file was found at
+
+    C:/src/vcpkg/installed/x64-windows/share/cgal/FindGMP.cmake
+
+Call Stack (most recent call first):
+  C:/src/vcpkg/installed/x64-windows/share/cgal/CGAL_SetupGMP.cmake:24 (find_package)
+  C:/src/vcpkg/installed/x64-windows/share/cgal/CGAL_SetupCGALDependencies.cmake:37 (include)
+  C:/src/vcpkg/installed/x64-windows/share/cgal/CGALConfig.cmake:155 (include)
+  C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake:852 (_find_package)
+  CMakeLists.txt:10 (find_package)
+
+
+CMake Debug Log at C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake:852 (_find_package):
+  find_package considered the following paths for FindMPFR.cmake:
+
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/share/cmake-3.24/Modules/FindMPFR.cmake
+
+  The file was found at
+
+    C:/src/vcpkg/installed/x64-windows/share/cgal/FindMPFR.cmake
+
+Call Stack (most recent call first):
+  C:/src/vcpkg/installed/x64-windows/share/cgal/CGAL_SetupGMP.cmake:25 (find_package)
+  C:/src/vcpkg/installed/x64-windows/share/cgal/CGAL_SetupCGALDependencies.cmake:37 (include)
+  C:/src/vcpkg/installed/x64-windows/share/cgal/CGALConfig.cmake:155 (include)
+  C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake:852 (_find_package)
+  CMakeLists.txt:10 (find_package)
+
+
+CMake Debug Log at C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake:852 (_find_package):
+  find_package considered the following paths for FindGMP.cmake:
+
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/share/cmake-3.24/Modules/FindGMP.cmake
+
+  The file was found at
+
+    C:/src/vcpkg/installed/x64-windows/share/cgal/FindGMP.cmake
+
+Call Stack (most recent call first):
+  C:/src/vcpkg/installed/x64-windows/share/cgal/FindGMPXX.cmake:11 (find_package)
+  C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake:852 (_find_package)
+  C:/src/vcpkg/installed/x64-windows/share/cgal/CGAL_SetupGMP.cmake:26 (find_package)
+  C:/src/vcpkg/installed/x64-windows/share/cgal/CGAL_SetupCGALDependencies.cmake:37 (include)
+  C:/src/vcpkg/installed/x64-windows/share/cgal/CGALConfig.cmake:155 (include)
+  C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake:852 (_find_package)
+  CMakeLists.txt:10 (find_package)
+
+
+CMake Debug Log at C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake:852 (_find_package):
+  find_package considered the following paths for FindGMPXX.cmake:
+
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/share/cmake-3.24/Modules/FindGMPXX.cmake
+
+  The file was found at
+
+    C:/src/vcpkg/installed/x64-windows/share/cgal/FindGMPXX.cmake
+
+Call Stack (most recent call first):
+  C:/src/vcpkg/installed/x64-windows/share/cgal/CGAL_SetupGMP.cmake:26 (find_package)
+  C:/src/vcpkg/installed/x64-windows/share/cgal/CGAL_SetupCGALDependencies.cmake:37 (include)
+  C:/src/vcpkg/installed/x64-windows/share/cgal/CGALConfig.cmake:155 (include)
+  C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake:852 (_find_package)
+  CMakeLists.txt:10 (find_package)
+
+
+CMake Debug Log at C:/src/vcpkg/installed/x64-windows/share/boost/vcpkg-cmake-wrapper.cmake:11 (_find_package):
+  find_package considered the following paths for FindBoost.cmake:
+
+    C:/src/vcpkg/installed/x64-windows/share/cgal/FindBoost.cmake
+    C:/src/vcpkg/installed/x64-windows/share/cgal/FindBoost.cmake
+
+  The file was found at
+
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/share/cmake-3.24/Modules/FindBoost.cmake
+
+Call Stack (most recent call first):
+  C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake:806 (include)
+  C:/src/vcpkg/installed/x64-windows/share/cgal/CGAL_SetupBoost.cmake:20 (find_package)
+  C:/src/vcpkg/installed/x64-windows/share/cgal/CGAL_SetupCGALDependencies.cmake:48 (include)
+  C:/src/vcpkg/installed/x64-windows/share/cgal/CGALConfig.cmake:155 (include)
+  C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake:852 (_find_package)
+  CMakeLists.txt:10 (find_package)
+
+
+-- Boost include dirs: C:/src/vcpkg/installed/x64-windows/include
+-- Boost libraries:    
+CMake Debug Log at C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake:852 (_find_package):
+  find_package considered the following paths for FindThreads.cmake:
+
+    C:/src/vcpkg/installed/x64-windows/share/cgal/FindThreads.cmake
+    C:/src/vcpkg/installed/x64-windows/share/cgal/FindThreads.cmake
+
+  The file was found at
+
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/share/cmake-3.24/Modules/FindThreads.cmake
+
+Call Stack (most recent call first):
+  C:/src/vcpkg/installed/x64-windows/share/cgal/CGAL_SetupCGALDependencies.cmake:112 (find_package)
+  C:/src/vcpkg/installed/x64-windows/share/cgal/CGAL_setup_target_dependencies.cmake:3 (CGAL_setup_CGAL_dependencies)
+  C:/src/vcpkg/installed/x64-windows/share/cgal/CGALConfig.cmake:172 (CGAL_setup_target_dependencies)
+  C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake:852 (_find_package)
+  CMakeLists.txt:10 (find_package)
+
+
+-- Using gcc version 4 or later. Adding -frounding-math
+CMake Debug Log at C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake:852 (_find_package):
+  find_package considered the following paths for FindCGAL.cmake:
+
+    C:/Program Files/JetBrains/CLion 2022.3.3/bin/cmake/win/x64/share/cmake-3.24/Modules/FindCGAL.cmake
+
+  The file was not found.
+
+    C:/src/vcpkg/installed/x64-windows/share/cgal/CGALConfig.cmake
+
+Call Stack (most recent call first):
+  CMakeLists.txt:10 (find_package)
+
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/user/PycharmProjects/obstacleMobilityModel/visibility_polygon/cmake-build-debug

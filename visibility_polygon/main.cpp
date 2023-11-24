@@ -1,0 +1,18 @@
+//#include <iostream>
+//// pybind11_wrapper.cpp
+//#include <pybind11/pybind11.h>
+//#include "cppmult.hpp"
+//
+//PYBIND11_MODULE(pybind11_example, m) {
+//    m.doc() = "pybind11 example plugin"; // Optional module docstring
+//    m.def("cpp_function", &cppmult, "A function that multiplies two numbers");
+//}
+//
+//int mult_test(int a, int b){
+//    return a*b;
+//}
+//
+//int main() {
+//    std::cout << "Hello, World!" << std::endl;
+//    return 0;
+//}

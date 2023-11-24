@@ -1,7 +1,9 @@
 from icc_simulation import *
 from visibility_graph import edge_distance
 from obstacles import get_madrid_buildings
+from time import time
 if __name__ =='__main__':
+    start_time = time()
     simulator = IccSimulator(renewable_energy_flag=True)
     simulator.build_graph()
     simulator.init_stations_in_shortest_route()
@@ -20,18 +22,18 @@ if __name__ =='__main__':
             dist += edge_distance(_p, Point(200.0, 370.0))
 
 
-    print(simulator._controller.base_stations.__len__())
+    print(time()-start_time)
 
 
-####
-arrivals_per_hour_energy = np.loadtxt("C:\\Users\\user\\PycharmProjects\\obstacleMobilityModel\\results\\arrivals_per_hour.txt")
-arrivals_per_hour = np.loadtxt("C:\\Users\\user\\PycharmProjects\\obstacleMobilityModel\\results\\arrivals_per_hour_no_solar.txt")
-
-returns_per_hour_energy = np.loadtxt("C:\\Users\\user\\PycharmProjects\\obstacleMobilityModel\\results\\returns_per_hour.txt")
-returns_per_hour = np.loadtxt("C:\\Users\\user\\PycharmProjects\\obstacleMobilityModel\\results\\returns_per_hour_no_solar.txt")
-
-n_bs_per_hour_energy = np.loadtxt("C:\\Users\\user\\PycharmProjects\\obstacleMobilityModel\\results\\n_bs_per_hour.txt")
-n_bs_per_hour = np.loadtxt("C:\\Users\\user\\PycharmProjects\\obstacleMobilityModel\\results\\n_bs_per_hour_no_solar.txt")
+# ####
+# arrivals_per_hour_energy = np.loadtxt("C:\\Users\\user\\PycharmProjects\\obstacleMobilityModel\\results\\arrivals_per_hour.txt")
+# arrivals_per_hour = np.loadtxt("C:\\Users\\user\\PycharmProjects\\obstacleMobilityModel\\results\\arrivals_per_hour_no_solar.txt")
+#
+# returns_per_hour_energy = np.loadtxt("C:\\Users\\user\\PycharmProjects\\obstacleMobilityModel\\results\\returns_per_hour.txt")
+# returns_per_hour = np.loadtxt("C:\\Users\\user\\PycharmProjects\\obstacleMobilityModel\\results\\returns_per_hour_no_solar.txt")
+#
+# n_bs_per_hour_energy = np.loadtxt("C:\\Users\\user\\PycharmProjects\\obstacleMobilityModel\\results\\n_bs_per_hour.txt")
+# n_bs_per_hour = np.loadtxt("C:\\Users\\user\\PycharmProjects\\obstacleMobilityModel\\results\\n_bs_per_hour_no_solar.txt")
 
 
 
